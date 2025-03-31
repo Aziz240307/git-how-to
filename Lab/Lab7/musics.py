@@ -12,7 +12,7 @@ for song in allmusic:
     if song.endswith(".mp3"):
         playlist.append(os.path.join(music_folder, song))
 screen = pygame.display.set_mode((800, 800))
-pygame.display.set_caption("Darkhan-Juzz")
+pygame.display.set_caption("Kairat-Nurtas")
 clock = pygame.time.Clock()
 
 background = pygame.image.load(os.path.join("music-elements", "background.png"))
