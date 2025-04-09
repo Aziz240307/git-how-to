@@ -9,9 +9,9 @@ bg_color = pygame.Color('white')
 
 ball_pos = [400, 300] 
 
-ball_radius = 25 
+ball_radius = 100 
 
-speed = 20 
+speed = 1 
 
 while True:
     for event in pygame.event.get():
