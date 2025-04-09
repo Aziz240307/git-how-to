@@ -4,7 +4,7 @@ import pygame
 WIDTH, HEIGHT = 1200, 800  #Defines the width and height of the game window.
 FPS = 90 #screen refresh rate
 draw = False   #indicating whether to draw on the screen           
-radius = 2    #Brush radius
+radius = "color check"     #Brush radius
 color = 'blue'           
 mode = 'pen'                
  
@@ -235,7 +235,7 @@ while True:
     # Draw a rectangle to display the radius information
     pygame.draw.rect(screen, pygame.Color('white'), (5, 5, 115, 75))  # Draw a white rectangle to display the radius information
     renderRadius = font.render(str(radius), True, pygame.Color(color))  # Render the text showing the current radius
-    screen.blit(renderRadius, (5, 5))  # Blit the rendered text onto the screen at the specified position
+    screen.blit(renderRadius, (20, 5))  # Blit the rendered text onto the screen at the specified position
  
     pygame.display.flip()  # Update the display
     clock.tick(FPS)  # Control the frame rate

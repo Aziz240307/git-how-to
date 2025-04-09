@@ -5,7 +5,7 @@ pygame.init()
 
 playlist = []
 
-music_folder = "/Users/azizbekrustam/Documents/PP2/lab7/musics"
+music_folder = "C:\\Users\\я\\git how to\\Lab\\Lab7\\musics"
 allmusic = os.listdir(music_folder)
 
 for song in allmusic:
@@ -15,15 +15,15 @@ screen = pygame.display.set_mode((800, 800))
 pygame.display.set_caption("Kairat-Nurtas")
 clock = pygame.time.Clock()
 
-background = pygame.image.load(os.path.join("music-elements", "background.png"))
+background = pygame.image.load(os.path.join("Lab7/musicelements/background.png"))
 bg = pygame.Surface((500, 200))
 bg.fill((255, 255, 255))
 
 font2 = pygame.font.SysFont(None, 20)
-playb = pygame.image.load(os.path.join("music-elements", "play.png"))
-pausb = pygame.image.load(os.path.join("music-elements", "pause.png"))
-nextb = pygame.image.load(os.path.join("music-elements", "next.png"))
-prevb = pygame.image.load(os.path.join("music-elements", "back.png"))
+playb = pygame.image.load(os.path.join("Lab7/musicelements/play.png"))
+pausb = pygame.image.load(os.path.join("Lab7/musicelements/pause.png"))
+nextb = pygame.image.load(os.path.join("Lab7/musicelements/next.png"))
+prevb = pygame.image.load(os.path.join("Lab7/musicelements/back.png"))
 
 index = 0
 aplay = False
