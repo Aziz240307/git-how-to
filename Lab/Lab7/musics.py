@@ -16,8 +16,9 @@ pygame.display.set_caption("Kairat-Nurtas")
 clock = pygame.time.Clock()
 
 background = pygame.image.load(os.path.join("Lab7/musicelements/background.png"))
-bg = pygame.Surface((500, 200))
+bg = pygame.Surface((700, 300))
 bg.fill((255, 255, 255))
+##screen.blit(background, (300, 0))
 
 font2 = pygame.font.SysFont(None, 20)
 playb = pygame.image.load(os.path.join("Lab7/musicelements/play.png"))
@@ -59,9 +60,9 @@ while run:
                 pygame.mixer.music.load(playlist[index])
                 pygame.mixer.music.play()
     text2 = font2.render(os.path.basename(playlist[index]), True, (20, 20, 50))
-    screen.blit(background, (-50, 0))
+    screen.blit(background, (200, 0))
     screen.blit(bg, (155, 500))
-    screen.blit(text2, (365, 520))
+    screen.blit(text2, (250, 520))
     playb = pygame.transform.scale(playb, (70, 70))
     pausb = pygame.transform.scale(pausb, (70, 70))
     if aplay:
