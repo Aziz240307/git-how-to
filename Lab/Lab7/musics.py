@@ -18,7 +18,7 @@ clock = pygame.time.Clock()
 background = pygame.image.load(os.path.join("Lab7/musicelements/background.png"))
 bg = pygame.Surface((700, 300))
 bg.fill((255, 255, 255))
-##screen.blit(background, (300, 0))
+
 
 font2 = pygame.font.SysFont(None, 20)
 playb = pygame.image.load(os.path.join("Lab7/musicelements/play.png"))

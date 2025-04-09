@@ -4,7 +4,7 @@ import pygame
 WIDTH, HEIGHT = 1200, 800  #Defines the width and height of the game window.
 FPS = 90 #screen refresh rate
 draw = False   #indicating whether to draw on the screen           
-radius = 2    #Brush radius
+radius = "color_check"    #Brush radius
 color = 'blue'           
 mode = 'pen'                
  
