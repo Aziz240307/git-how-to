@@ -198,16 +198,31 @@ def gameLoop():
             time.sleep(3)  # Задержка перед сбросом игры
             snake.reset()  # Сбрасываем состояние змейки
 
-        if snake.history[0][0] > 500:  # Если змейка вышла за пределы правой границы
-            snake.history[0][0] = 0  # Перемещаем змейку на левую границу
+# Проверка выхода змейки за правую или левую границу
+        head_x = snake.history[0][0]
 
-        if snake.history[0][0] < 0:  # Если змейка вышла за пределы левой границы
-            snake.history[0][0] = 500  # Перемещаем змейку на правую границу
-            
-        if snake.history[0][1] > 500:
-            snake.history[0][1] = 0
-        if snake.history[0][1] < 0:
-            snake.history[0][1] = 500
+        if head_x > 500 or head_x < 0:  # Если змейка вышла за пределы правой или левой границы
+            score = 0  # Сбрасываем счет
+            level = 0  # Сбрасываем уровень
+            font = pygame.font.SysFont(None, 100)  # Устанавливаем шрифт для отображения текста
+            text = font.render("Game Over!", True, defeat_colour)  # Создаем текст "Game Over!"
+            display.blit(text, (50, 200))  # Отображаем текст на экране
+            pygame.display.update()  # Обновляем экран
+            time.sleep(3)  # Задержка перед сбросом игры
+            snake.reset()  # Сбрасываем состояние змейки
+
+# Проверка выхода змейки за верхнюю или нижнюю границу
+        head_y = snake.history[0][1]
+
+        if head_y > 500 or head_y < 0:  # Если змейка вышла за пределы верхней или нижней границы
+            score = 0  # Сбрасываем счет
+            level = 0  # Сбрасываем уровень
+            font = pygame.font.SysFont(None, 100)  # Устанавливаем шрифт для отображения текста
+            text = font.render("Game Over!", True, defeat_colour)  # Создаем текст "Game Over!"
+            display.blit(text, (50, 200))  # Отображаем текст на экране
+            pygame.display.update()  # Обновляем экран
+            time.sleep(3)  # Задержка перед сбросом игры
+            snake.reset()  # Сбрасываем состояние змейки
 
         pygame.display.update()
         clock.tick(SPEED)

@@ -7,11 +7,11 @@ pygame.display.set_caption("Draw circle")
 ball_color = pygame.Color('red')
 bg_color = pygame.Color('white')
 
-ball_pos = [400, 300] 
+ball_pos = [400, 300] #position
 
 ball_radius = 100 
 
-speed = 1 
+speed = 100
 
 while True:
     for event in pygame.event.get():
@@ -31,4 +31,4 @@ while True:
     screen.fill(bg_color)
     pygame.draw.circle(screen, ball_color, ball_pos, ball_radius)
     pygame.display.flip()
-    pygame.time.Clock().tick(24)
+    pygame.time.Clock().tick(24)  #частоты, пауза
