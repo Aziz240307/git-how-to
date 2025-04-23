@@ -143,7 +143,7 @@ squares = [[x, 100] for x in range(30, 101, 10)]
 direction = "right"
 next_dir = "right"
 
-class Food:
+class Food: #Создаёт объект еды с позицией, типом и временем появления.
     def __init__(self, position, food_type, spawn_time):
         self.position = position
         self.food_type = food_type
@@ -152,13 +152,13 @@ class Food:
     def is_expired(self, current_time):
         return current_time - self.spawn_time > self.food_type.duration
 
-def draw_grid():
+def draw_grid(): # сетка
     for x in range(0, width, 10):
         pygame.draw.line(screen, GRAY, (x, 0), (x, height), 1)
     for y in range(0, height, 10):
         pygame.draw.line(screen, GRAY, (0, y), (width, y), 1)
 
-def game_over(font, size, color):
+def game_over(font, size, color):#gameover 
     global done
     save_user_score(user_id, level, score, speed_level)
     overlay = pygame.Surface((width, height))
