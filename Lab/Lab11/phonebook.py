@@ -21,13 +21,13 @@ def insert_data():
     if method == "con":
         name = input("Name: ")
         surname = input("Surname: ")
-        phone = input("Phone: ")
+        phone = input("Phone : ")
         cur.execute("INSERT INTO phonebook (name, surname, phone) VALUES (%s, %s, %s)", (name, surname, phone))
     elif method == "csv":
         filepath = input("Enter a file path with proper extension: ")
         with open(filepath, 'r') as f:
             reader = csv.reader(f)
-            next(reader)  # Skip the header row
+            next(reader) 
             for row in reader:
                 cur.execute("INSERT INTO phonebook (name, surname, phone) VALUES (%s, %s, %s)", tuple(row))
 
